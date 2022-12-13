@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>Chỉ Số Cân Nặng Của Cơ Thể</h3>
+<form>
+  <input type="number" id="demo" name="weight" placeholder="nhập cân nặng"/>Kilogam
+  <input type="number" id="demo1" name="height" placeholder="nhập chiều cao"/>Mét
+  <button type="button" onclick="weightIndex()">Click Me</button>
+</form>
+<p id="demo2"></p>
+</body>
+<script>
+  function weightIndex() {
+    let number = +document.getElementById("demo").value;
+    let number1 = +document.getElementById("demo1").value;
+    let BMI;
+    BMI = number / (number1**2);
+    if(BMI < 18) {
+      document.getElementById("demo2").innerHTML = BMI.toFixed(2) + "Thiếu Cân";
+    }else if(BMI < 25.0){
+      document.getElementById("demo2").innerHTML = BMI.toFixed(2) + "Bình Thường";
+    }else if(BMI < 30.0) {
+      document.getElementById("demo2").innerHTML = BMI.toFixed(2) + "Thừa cân";
+    }else {
+      document.getElementById("demo2").innerHTML = BMI.toFixed(2) + "Béo Phì";
+    }
+  }
+</script>
+</html>
