@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Điểm Trung Bình Cả Năm Học</h2>
+<table border="1">
+<tr>
+  <th>Môn học</th>
+  <th>điểm 1 tiết </th>
+  <th>điểm thi giữa học kì 1</th>
+  <th>điểm thi cuối học kì 2</th>
+  <th>Điểm trung bình cả năm</th>
+</tr>
+  <tr>
+    <td>Môn Toán</td>
+    <td><input type="number" id="math"/></td>
+    <td><input type="number" id="math1"/></td>
+    <td><input type="number" id="math2"/></td>
+    <td><input type="number" id="math3"/></td>
+  </tr>
+  <tr>
+    <td>Môn văn</td>
+    <td><input type="number" id="literature"/></td>
+    <td><input type="number" id="literature1"/></td>
+    <td><input type="number" id="literature2"/></td>
+    <td><input type="number" id="literature3"/></td>
+  </tr>
+  <tr>
+    <td>Môn Anh</td>
+    <td><input type="number" id="english"/></td>
+    <td><input type="number" id="english1"/></td>
+    <td><input type="number" id="english2"/></td>
+    <td><input type="number" id="english3"/></td>
+  </tr>
+  <tr>
+    <td colspan="4">Điểm trung bình cả năm</td>
+    <td id="mediumscore"></td>
+  </tr>
+</table>
+<br>
+<button type="button" onclick="medium_score()">Check Number</button>
+</body>
+<script>
+function medium_score() {
+  let literature = +document.getElementById("literature").value;
+  let literature1 = +document.getElementById("literature1").value;
+  let literature2 = +document.getElementById("literature2").value;
+  result = ((literature * 2) + (literature1 *3) +(literature2 * 5)) /2;
+  document.getElementById("literature3").innerHTML = result ;
+}
+</script>
+</html>

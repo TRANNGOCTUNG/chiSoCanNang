@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style>
+    table {
+      background-color: aqua;
+    }
+    #demo {
+      width: 200px;
+     height: 50px;
+    }
+    .demo1 {
+      width : 50px;
+      height: 50px;
+    }
+  </style>
+</head>
+<body>
+<table>
+  <tr>
+    <th><input type="number" id="demo" name="number"/></th>
+  </tr>
+  <tr>
+    <td>
+      <button class="demo1" type="button" value="1">1</button>
+      <button class="demo1" type="button" value="2">2</button>
+      <button class="demo1" type="button" value="3">3</button>
+      <button id="demo2" type="button"  onclick="add()" value="+">+</button>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <button class="demo1" type="button" value="4">4</button>
+      <button class="demo1" type="button" value="5">5</button>
+      <button class="demo1" type="button" value="6">6</button>
+      <button id="demo3" type="button" onclick="sub()" value="-">-</button>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <button class="demo1" type="button" value="7">7</button>
+      <button class="demo1" type="button" value="8">8</button>
+      <button class="demo1" type="button" value="9">9</button>
+      <button id="demo4" type="button" onclick="multication()" value="x">x</button>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <button id="demo5" type="button" onclick="deleted()" value="c">C</button>
+      <button class="demo1" type="button" value="0">0</button>
+      <button id="demo6" type="button" onclick="results()" value="=">=</button>
+      <button id="demo7" type="button" onclick="devision()" value="/">/</button>
+    </td>
+  </tr>
+</table>
+<script>
+  function add() {
+    let number = +document.getElementById("demo1").value;
+    let number1 = +document.getElementById("demo2").value;
+    let result;
+    result = number + number1;
+  }
+</script>
+</body>
+</html>
